@@ -21,7 +21,7 @@ class Program
             number = int.Parse(newValue);
             if (number != 0) {
                 numbers.Add(number);
-                amount = amount + number;
+                amount = amount + number; //amount += number;
                 if (number > largest){
                     largest = number;
                 }
@@ -34,10 +34,12 @@ class Program
                 Console.WriteLine($"The average is: {media}");
                 Console.WriteLine($"The largest number is: {largest}");
                 Console.WriteLine($"The smallest positive number is: {smallest}");
-            /*    Console.WriteLine("The sorted list is:");
-                foreach(int element in numbers){
+                numbers.Sort();
+                Console.WriteLine("The sorted list is:");
+                    foreach(int element in numbers){
+
                     Console.WriteLine(element);
-                } */
+                } 
             }
             
         }
